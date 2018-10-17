@@ -1,0 +1,45 @@
+.tweet{
+    background-color: gainsboro;
+    width: 500px;
+    margin: auto;
+    height: 70px;
+    border-bottom: 1px solid white;
+
+}
+
+.userN{
+    font-weight:initial;
+    color: indigo;
+    font-style: oblique;
+}
+.content{
+    color: blue;
+    font-style: oblique;
+}
+.avatar{
+    float: left;
+    width: 10px;
+}
+.infos{
+    float: left;
+}
+.gray{
+    color: gray;
+    padding-left: 10px;
+}
+.trash{
+    padding-left: 10px;
+}
+.gray_date{
+    color: gray;
+    padding-left: 5px;
+}
+.cont{
+    display: inline;
+    padding-top: 15px;
+    text-align: 
+    
+}
+.fullName{
+    padding-left: 50px;
+}
