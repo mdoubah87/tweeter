@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './ByUserName.css';
 
 import moment from 'moment';
@@ -9,6 +10,10 @@ import { tweets } from '../../constants';
 
 
 class ByUserName extends Component {
+    static propTypes = {
+        params: PropTypes.object.isRequired,
+    };
+
     state = {
         tweets,
     }
@@ -22,7 +27,7 @@ class ByUserName extends Component {
             username: 'Pro_Git',
             fullName: 'PROGIT',
             content: tweet,
-            date: moment().format('DD/MM/YYYY'),
+            date: moment().format('DD/MM/YYYY'), 
           },
           ...tweets,
         ]
@@ -36,11 +41,14 @@ class ByUserName extends Component {
     render(){
 
         const { tweets } = this.state;
+        const { params } = this.props;
+
         return ( 
             <div className='homepage'>
+             <h1>{params.username}</h1>
+             <TweetBox publish = {this.publish}/>
                 <div className='tweet'>
-                    <TweetBox publish = {this.publish}/>
-                    {tweets.map((tweet, index) => (
+                    {tweets.map((tweet, index) => tweet.username === params.username && (
                         <Tweet
                             key={index}
                             index={index}
@@ -55,4 +63,3 @@ class ByUserName extends Component {
 }
 
 export default ByUserName;
-

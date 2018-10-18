@@ -1,6 +1,6 @@
 const tweets = [{
         avatar: 'images/avatar0.png',
-        username: 'Bah_mdou',
+        username: 'Mdoubah',
         fullName: 'Bah Mamadou',
         content: 'Bienvenue dans notre essais de react',
         date: '14/10/1990',
