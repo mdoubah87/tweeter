@@ -12,15 +12,15 @@ const highlightedStr = (str) =>
                     <Link
                         className="highlight"
                         to={`/tweets/${word.substring(1)}`}
-                        key={index}
-                    >{word}
+                        key={ index }
+                    >{ word }
                     </Link>
 
                 );
             }
-            return <a key={index} className='highlight'> {word} </a>
+            return <a key={ index } className='highlight'> { word } </a>
         }
-        return <span key={index}> { word} </span>
+        return <span key={ index }> { word } </span>
     });
 
     export {
